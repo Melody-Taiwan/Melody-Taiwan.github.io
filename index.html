@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Pei Ling Chang — AI systems builder working across machine learning, multimodal interaction, computer architecture, and open source." />
+  <meta name="theme-color" content="#0b1020" />
+  <meta property="og:title" content="Pei Ling Chang — AI Systems Portfolio" />
+  <meta property="og:description" content="AI systems, research prototypes, computer architecture, and open-source contributions." />
+  <meta property="og:type" content="website" />
+  <title>Pei Ling Chang | AI Systems Portfolio</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Pei Ling Chang home">
+        <span class="brand-mark" aria-hidden="true">PL</span>
+        <span>Pei Ling Chang</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+        <span class="sr-only">Toggle navigation</span>
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-links" id="nav-links">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#research">Research</a>
+        <a href="#open-source">Open source</a>
+        <a href="resume.html">Resume</a>
+        <button class="theme-toggle" type="button" aria-label="Toggle color theme" title="Toggle color theme">◐</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero container" id="top">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">AI SYSTEMS · MACHINE LEARNING · COMPUTER ARCHITECTURE</p>
+        <h1>I build AI systems that connect models, software, and real-world signals.</h1>
+        <p class="hero-lead">
+          I am a Computer Science master's student at National Dong Hwa University in Taiwan,
+          building research prototypes and practical systems across multimodal AI, event-driven
+          applications, computer vision, and computer architecture.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button primary" href="#work">Explore my work</a>
+          <a class="button secondary" href="https://github.com/Melody-Taiwan" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a class="button secondary" href="https://www.linkedin.com/in/pei-ling-chang-bab512414/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        </div>
+
+        <ul class="quick-facts" aria-label="Quick facts">
+          <li><span class="status-dot" aria-hidden="true"></span>Open to internships and collaboration</li>
+          <li>Taiwan</li>
+          <li>M.S. Computer Science</li>
+        </ul>
+      </div>
+
+      <aside class="hero-panel reveal" aria-label="Profile summary">
+        <div class="avatar-wrap">
+          <img src="https://avatars.githubusercontent.com/u/42580063?v=4" alt="GitHub avatar for Pei Ling Chang" width="160" height="160" />
+        </div>
+        <div class="signal-grid" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <p class="panel-label">CURRENT FOCUS</p>
+        <h2>AI-aware systems and adaptive computer architecture</h2>
+        <p>Exploring how intelligent workloads, memory systems, and on-chip communication can be designed together.</p>
+      </aside>
+    </section>
+
+    <section class="section container" id="about">
+      <div class="section-heading reveal">
+        <p class="eyebrow">ABOUT</p>
+        <h2>From research questions to working systems.</h2>
+      </div>
+      <div class="about-grid">
+        <p class="large-copy reveal">
+          My projects tend to start at the boundary between fields: an AI commentator driven by live game events,
+          a motion-feedback pipeline built from pose estimation, or a network-on-chip study shaped around emerging
+          memory workloads. I enjoy turning those ideas into testable architectures, code, experiments, and documentation.
+        </p>
+        <div class="capability-list reveal">
+          <article>
+            <span>01</span>
+            <div><h3>AI systems</h3><p>LLM workflows, multimodal evaluation, event-driven applications, and research prototypes.</p></div>
+          </article>
+          <article>
+            <span>02</span>
+            <div><h3>Systems research</h3><p>Computer architecture, network-on-chip simulation, performance analysis, and hardware-aware design.</p></div>
+          </article>
+          <article>
+            <span>03</span>
+            <div><h3>Engineering practice</h3><p>Python, Git, Linux, technical writing, testing, and open-source collaboration.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="work">
+      <div class="section-heading reveal">
+        <p class="eyebrow">SELECTED WORK</p>
+        <h2>Systems built to be tested, explained, and improved.</h2>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card featured reveal">
+          <div class="project-topline"><span>AI SYSTEMS</span><span>ACTIVE</span></div>
+          <h3>Neko.exe — Event-Driven AI VTuber</h3>
+          <p>A real-time character system that turns live game events into context-aware commentary using an LLM, conversation memory, and an event routing pipeline.</p>
+          <ul class="tags"><li>Python</li><li>FastAPI</li><li>LLM</li><li>Live telemetry</li></ul>
+          <span class="project-link muted">Case study in progress</span>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-topline"><span>BACKEND</span><span>PUBLIC REPO</span></div>
+          <h3>Gaming Intelligence SaaS PoC</h3>
+          <p>A FastAPI proof of concept for live-ops data ingestion, subscription-tier enforcement, secure media delivery, and asynchronous API access.</p>
+          <ul class="tags"><li>FastAPI</li><li>Python</li><li>API design</li><li>Cloud architecture</li></ul>
+          <a class="project-link" href="https://github.com/Melody-Taiwan/gaming-intelligence-saas-poc" target="_blank" rel="noopener noreferrer">View repository ↗</a>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-topline"><span>AUTOMATION</span><span>PUBLIC REPO</span></div>
+          <h3>AI Print & Framing Automation</h3>
+          <p>A programmatic high-resolution layout engine for scalable art-print production, dynamic mat proportions, and serverless image workflows.</p>
+          <ul class="tags"><li>Python</li><li>Image processing</li><li>Automation</li><li>Serverless</li></ul>
+          <a class="project-link" href="https://github.com/Melody-Taiwan/ai-watercolor-print-automation" target="_blank" rel="noopener noreferrer">View repository ↗</a>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-topline"><span>COMPUTER VISION</span><span>RESEARCH PROTOTYPE</span></div>
+          <h3>Figure Skating AI Coach</h3>
+          <p>A phase-aware motion-analysis pipeline using pose estimation and dynamic time warping to turn skating movement into structured feedback.</p>
+          <ul class="tags"><li>MediaPipe</li><li>DTW</li><li>Motion analysis</li><li>Python</li></ul>
+          <span class="project-link muted">Documentation in progress</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container" id="research">
+      <div class="section-heading reveal">
+        <p class="eyebrow">RESEARCH</p>
+        <h2>Working across signals, architecture, and intelligent workloads.</h2>
+      </div>
+
+      <div class="research-list">
+        <article class="research-item reveal">
+          <div class="research-index">01</div>
+          <div>
+            <p class="project-topline"><span>MASTER'S RESEARCH DIRECTION</span></p>
+            <h3>PIM-Aware Coherent NoC</h3>
+            <p>Studying congestion onset and adaptive control in coherent on-chip networks supporting processing-in-memory workloads, with a small synthesizable digital PIM primitive.</p>
+          </div>
+          <div class="research-meta">Computer architecture<br />NoC · PIM · Coherence</div>
+        </article>
+
+        <article class="research-item reveal">
+          <div class="research-index">02</div>
+          <div>
+            <p class="project-topline"><span>SCIENTIFIC MACHINE LEARNING</span></p>
+            <h3>Plant Electrophysiology Modeling</h3>
+            <p>Exploring latent nonlinear dynamics and external stimulus coupling in plant electrical signals using sparse system identification and topology-aware analysis.</p>
+          </div>
+          <div class="research-meta">Time series<br />SINDy · representation learning</div>
+        </article>
+
+        <article class="research-item reveal">
+          <div class="research-index">03</div>
+          <div>
+            <p class="project-topline"><span>AI REASONING</span></p>
+            <h3>NeuroGolf / ARC Program Synthesis</h3>
+            <p>Building and evaluating programmatic transformations for abstract visual reasoning tasks, with an emphasis on reproducible candidate generation and validation.</p>
+          </div>
+          <div class="research-meta">Reasoning systems<br />Program synthesis · evaluation</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container" id="open-source">
+      <div class="section-heading reveal">
+        <p class="eyebrow">OPEN SOURCE</p>
+        <h2>Small changes, shipped through real review.</h2>
+      </div>
+
+      <div class="oss-card reveal">
+        <div>
+          <p class="project-topline"><span>CARDANO FOUNDATION</span><span>2 MERGED PRs</span></p>
+          <h3>Contributor to cardano-org</h3>
+          <p>Contributed production fixes and technical documentation improvements through the full GitHub review workflow.</p>
+        </div>
+        <div class="pr-list">
+          <a href="https://github.com/cardano-foundation/cardano-org/pull/705" target="_blank" rel="noopener noreferrer">
+            <span>PR #705</span>
+            <strong>Update outdated app website links</strong>
+            <span>MERGED ↗</span>
+          </a>
+          <a href="https://github.com/cardano-foundation/cardano-org/pull/706" target="_blank" rel="noopener noreferrer">
+            <span>PR #706</span>
+            <strong>Explain Net Change Limit on governance chart</strong>
+            <span>MERGED ↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container contact-section" id="contact">
+      <div class="contact-card reveal">
+        <p class="eyebrow">LET'S CONNECT</p>
+        <h2>Interested in AI systems, research engineering, and open-source collaboration.</h2>
+        <p>The best way to reach me is through LinkedIn or GitHub.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="https://www.linkedin.com/in/pei-ling-chang-bab512414/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a>
+          <a class="button secondary" href="https://github.com/Melody-Taiwan" target="_blank" rel="noopener noreferrer">View GitHub ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Pei Ling Chang</p>
+      <p>Built as a living record of research, systems, and shipped work.</p>
+    </div>
+  </footer>
+</body>
+</html>
