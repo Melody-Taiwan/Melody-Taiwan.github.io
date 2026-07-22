@@ -1,0 +1,35 @@
+/* Project Forge service page */
+.service-hero { padding-block: clamp(90px, 14vw, 180px); }
+.service-hero h1 { max-width: 1050px; font-size: clamp(3.2rem, 8vw, 7.4rem); }
+.service-hero > p:not(.eyebrow) { max-width: 780px; color: var(--muted); font-size: clamp(1.08rem, 2vw, 1.35rem); }
+.service-section { padding-block: clamp(75px, 10vw, 130px); border-top: 1px solid var(--line); }
+.service-grid { display: grid; gap: 16px; }
+.service-grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.service-grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.service-grid article { padding: clamp(25px, 4vw, 42px); border: 1px solid var(--line); border-radius: 23px; background: var(--surface); }
+.service-grid strong { color: var(--accent); font-size: clamp(2.6rem, 5vw, 4.5rem); letter-spacing: -.06em; }
+.service-grid h2 { margin: 18px 0 5px; font-size: 1.35rem; }
+.service-grid h3 { margin-top: 0; }
+.service-grid p, .service-grid li { color: var(--muted); }
+.pricing-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.price-card { padding: clamp(26px, 4vw, 44px); border: 1px solid var(--line); border-radius: 25px; background: var(--surface); }
+.price-card.featured { background: linear-gradient(145deg, color-mix(in srgb,var(--surface-solid) 90%,var(--accent)), color-mix(in srgb,var(--surface-solid) 90%,var(--accent-2))); }
+.price-card > p { color: var(--accent); font-size: .72rem; font-weight: 850; letter-spacing: .13em; }
+.price-card h2 { margin: 28px 0 5px; font-size: clamp(2.7rem, 5vw, 4.5rem); letter-spacing: -.06em; }
+.price-card h3 { margin: 0; font-size: 1rem; color: var(--muted); }
+.price-card ul, .service-grid ul { margin: 30px 0 0; padding-left: 20px; color: var(--muted); }
+.pricing-note { max-width: 800px; margin-top: 25px; color: var(--muted); font-size: .9rem; }
+.service-copy { display: grid; grid-template-columns: .35fr 1fr; gap: 45px; margin-bottom: 48px; }
+.service-copy h2 { margin: 0; font-size: clamp(2.5rem, 5vw, 5rem); line-height: 1.02; letter-spacing: -.06em; }
+.service-copy > p:last-child { grid-column: 2; max-width: 800px; margin: 0; color: var(--muted); font-size: 1.08rem; }
+.service-cta { margin-block: clamp(80px, 12vw, 150px); padding: clamp(38px, 7vw, 82px); border: 1px solid var(--line); border-radius: 34px; background: linear-gradient(135deg, color-mix(in srgb,var(--surface-solid) 88%,var(--accent-2)), color-mix(in srgb,var(--surface-solid) 90%,var(--accent))); box-shadow: var(--shadow); }
+.service-cta h2 { max-width: 950px; margin: 0; font-size: clamp(2.5rem, 5vw, 5rem); line-height: 1.02; letter-spacing: -.06em; }
+.service-cta > p:not(.eyebrow) { max-width: 760px; color: var(--muted); }
+@media (max-width: 900px) {
+  .service-grid.three, .pricing-grid { grid-template-columns: 1fr; }
+  .service-copy { grid-template-columns: 1fr; gap: 10px; }
+  .service-copy > p:last-child { grid-column: 1; }
+}
+@media (max-width: 720px) {
+  .service-grid.two { grid-template-columns: 1fr; }
+}
