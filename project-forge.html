@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Project Forge case study — a reproducible Python and FFmpeg pipeline that converts one sports training clip into branded 16:9, 9:16, and 1:1 deliverables." />
+  <meta name="theme-color" content="#0b1020" />
+  <meta property="og:title" content="Project Forge — Multi-Format Sports Video Pipeline" />
+  <meta property="og:description" content="One input clip. One command. Six branded deliverables." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/Melody-Taiwan/project-forge-video-pipeline/main/docs/media/project-forge-preview.gif" />
+  <title>Project Forge | Pei Ling Chang</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="case-study.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="brand" href="index.html" aria-label="Pei Ling Chang home">
+        <span class="brand-mark" aria-hidden="true">PL</span>
+        <span>Pei Ling Chang</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+        <span class="sr-only">Toggle navigation</span>
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-links" id="nav-links">
+        <a href="index.html#work">Work</a>
+        <a href="#outcomes">Outcomes</a>
+        <a href="#architecture">Architecture</a>
+        <a href="https://github.com/Melody-Taiwan/project-forge-video-pipeline" target="_blank" rel="noopener noreferrer">Repository ↗</a>
+        <button class="theme-toggle" type="button" aria-label="Toggle color theme" title="Toggle color theme">◐</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="case-hero container">
+      <div class="case-hero-copy reveal">
+        <a class="back-link" href="index.html#work">← Back to selected work</a>
+        <p class="eyebrow">AUTOMATION · VIDEO PIPELINE · PRODUCT ENGINEERING</p>
+        <h1>Project Forge</h1>
+        <p class="case-deck">A reproducible Python and FFmpeg pipeline that turns one selected sports training clip into branded, platform-ready 16:9, 9:16, and 1:1 MP4/GIF deliverables.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#demo">Watch the comparison</a>
+          <a class="button secondary" href="https://github.com/Melody-Taiwan/project-forge-video-pipeline" target="_blank" rel="noopener noreferrer">View repository ↗</a>
+        </div>
+      </div>
+
+      <div class="case-metrics reveal" aria-label="Project highlights">
+        <article><strong>1</strong><span>selected source clip</span></article>
+        <article><strong>1</strong><span>repeatable command</span></article>
+        <article><strong>6</strong><span>final deliverables</span></article>
+        <article><strong>3</strong><span>platform aspect ratios</span></article>
+      </div>
+    </section>
+
+    <section class="case-media container reveal" id="demo">
+      <div class="media-frame">
+        <video controls preload="metadata" poster="https://raw.githubusercontent.com/Melody-Taiwan/project-forge-video-pipeline/main/docs/media/project-forge-preview.gif">
+          <source src="https://raw.githubusercontent.com/Melody-Taiwan/project-forge-video-pipeline/main/demo/project-forge-comparison-demo.mp4" type="video/mp4" />
+          Your browser does not support embedded video. Open the comparison video from the project repository.
+        </video>
+      </div>
+      <div class="media-caption">
+        <span>ORIGINAL TRAINING CLIP</span>
+        <span>16:9 · 9:16 · 1:1</span>
+        <a href="https://github.com/Melody-Taiwan/project-forge-video-pipeline/blob/main/demo/project-forge-comparison-demo.mp4" target="_blank" rel="noopener noreferrer">Open video on GitHub ↗</a>
+      </div>
+    </section>
+
+    <section class="case-section container" id="problem">
+      <div class="case-section-label reveal">
+        <p class="eyebrow">THE PROBLEM</p>
+        <span>01</span>
+      </div>
+      <div class="case-section-body reveal">
+        <h2>One training clip often becomes several repetitive editing jobs.</h2>
+        <p class="case-lead">Sports coaches, studios, and creators reuse the same footage across YouTube, Reels, Shorts, websites, and social feeds. Manually rebuilding each composition wastes time and makes branding inconsistent.</p>
+        <div class="pain-grid">
+          <article><h3>Repetitive production</h3><p>The same title, logo, captions, crop, and export settings are rebuilt for every platform.</p></article>
+          <article><h3>Unsafe resizing</h3><p>Simple center crops can cut off the athlete, while generic blurred backgrounds often look unintentional.</p></article>
+          <article><h3>Inconsistent delivery</h3><p>Different dimensions, codecs, frame rates, and naming conventions create avoidable review work.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section container" id="solution">
+      <div class="case-section-label reveal">
+        <p class="eyebrow">THE SOLUTION</p>
+        <span>02</span>
+      </div>
+      <div class="case-section-body reveal">
+        <h2>Automate the repeatable work without pretending every video needs AI.</h2>
+        <p class="case-lead">Project Forge accepts a deliberately selected clip and a JSON configuration, then builds format-specific layouts with a stable subject anchor, branded overlays, burned-in captions, and verified exports.</p>
+
+        <div class="command-card" aria-label="Project Forge command">
+          <div class="command-topline"><span>WSL / UBUNTU</span><span>REPRODUCIBLE RUN</span></div>
+          <code>python pipeline.py --config config.json --clean</code>
+        </div>
+
+        <div class="output-grid" id="outcomes">
+          <article>
+            <div class="ratio ratio-landscape" aria-hidden="true"><span>16:9</span></div>
+            <h3>Landscape</h3>
+            <p>1920 × 1080 full-width output for YouTube, websites, presentations, and horizontal campaigns.</p>
+          </article>
+          <article>
+            <div class="ratio ratio-portrait" aria-hidden="true"><span>9:16</span></div>
+            <h3>Portrait</h3>
+            <p>1080 × 1920 card composition designed for Reels, Shorts, TikTok, and Stories.</p>
+          </article>
+          <article>
+            <div class="ratio ratio-square" aria-hidden="true"><span>1:1</span></div>
+            <h3>Square</h3>
+            <p>1080 × 1080 feed-ready composition with a dedicated subtitle-safe region.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section container" id="architecture">
+      <div class="case-section-label reveal">
+        <p class="eyebrow">ARCHITECTURE</p>
+        <span>03</span>
+      </div>
+      <div class="case-section-body reveal">
+        <h2>A narrow, testable rendering pipeline.</h2>
+        <ol class="pipeline-steps">
+          <li><span>01</span><div><h3>Load selected source and JSON config</h3><p>Input paths, project metadata, title copy, subject anchor, and output specifications stay outside the rendering code.</p></div></li>
+          <li><span>02</span><div><h3>Generate format-specific visual assets</h3><p>Python and Pillow create title overlays while SRT captions are converted to ASS with per-format positioning and typography.</p></div></li>
+          <li><span>03</span><div><h3>Compose each layout with FFmpeg</h3><p>The landscape, portrait, and square outputs use separate render graphs rather than applying one generic resize.</p></div></li>
+          <li><span>04</span><div><h3>Export production and preview formats</h3><p>Each layout produces an H.264 MP4 and a lightweight GIF preview with deterministic file naming.</p></div></li>
+          <li><span>05</span><div><h3>Verify the deliverables</h3><p>FFprobe checks resolution, frame rate, codec, and sample aspect ratio; GitHub Actions repeats the smoke test on pushes and pull requests.</p></div></li>
+        </ol>
+
+        <div class="tech-row" aria-label="Technology stack">
+          <span>Python 3.10+</span><span>FFmpeg</span><span>FFprobe</span><span>Pillow</span><span>ASS subtitles</span><span>JSON config</span><span>GitHub Actions</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section container">
+      <div class="case-section-label reveal">
+        <p class="eyebrow">PRODUCT DECISIONS</p>
+        <span>04</span>
+      </div>
+      <div class="case-section-body reveal">
+        <h2>Stability before speculative intelligence.</h2>
+        <div class="decision-grid">
+          <article class="decision-card positive">
+            <p class="panel-label">BUILT IN V1</p>
+            <h3>Static-anchor reframing</h3>
+            <p>A normalized focus point creates predictable crops for a selected clip and keeps the workflow easy to rerun.</p>
+          </article>
+          <article class="decision-card positive">
+            <p class="panel-label">BUILT IN V1</p>
+            <h3>Format-specific compositions</h3>
+            <p>Portrait and square outputs are designed as layouts, not merely resized versions of the landscape frame.</p>
+          </article>
+          <article class="decision-card boundary">
+            <p class="panel-label">EXPLICITLY OUT OF SCOPE</p>
+            <h3>No automatic person tracking</h3>
+            <p>V1 does not claim per-frame detection, multi-person tracking, primary-subject selection, or AI-generated camera motion.</p>
+          </article>
+          <article class="decision-card boundary">
+            <p class="panel-label">WHY</p>
+            <h3>A commercial promise the system can keep</h3>
+            <p>The product demonstrates reliable batch formatting for suitable clips instead of promising zero-configuration support for arbitrary footage.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section container">
+      <div class="case-section-label reveal">
+        <p class="eyebrow">RESULTS</p>
+        <span>05</span>
+      </div>
+      <div class="case-section-body reveal">
+        <h2>A complete v1 release, not only three exported videos.</h2>
+        <div class="result-table" role="table" aria-label="Project Forge results">
+          <div class="result-row result-head" role="row"><span role="columnheader">Output</span><span role="columnheader">Specification</span><span role="columnheader">Status</span></div>
+          <div class="result-row" role="row"><strong role="cell">16:9 MP4 + GIF</strong><span role="cell">1920 × 1080 · 30 fps · H.264</span><em role="cell">PASS</em></div>
+          <div class="result-row" role="row"><strong role="cell">9:16 MP4 + GIF</strong><span role="cell">1080 × 1920 · 30 fps · H.264</span><em role="cell">PASS</em></div>
+          <div class="result-row" role="row"><strong role="cell">1:1 MP4 + GIF</strong><span role="cell">1080 × 1080 · 30 fps · H.264</span><em role="cell">PASS</em></div>
+          <div class="result-row" role="row"><strong role="cell">Automated verification</strong><span role="cell">Dimensions · codec · fps · SAR</span><em role="cell">PASS</em></div>
+          <div class="result-row" role="row"><strong role="cell">CI smoke test</strong><span role="cell">Full render and validation on GitHub Actions</span><em role="cell">PASS</em></div>
+        </div>
+
+        <blockquote>One selected input clip. One command. Six branded deliverables.</blockquote>
+      </div>
+    </section>
+
+    <section class="case-cta container reveal">
+      <p class="eyebrow">PROJECT FORGE V1</p>
+      <h2>Built as a practical foundation for sports and fitness content repurposing.</h2>
+      <p>The next milestone is customer validation and service packaging—not adding features without evidence that customers need them.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="https://github.com/Melody-Taiwan/project-forge-video-pipeline" target="_blank" rel="noopener noreferrer">Explore the repository ↗</a>
+        <a class="button secondary" href="index.html#work">View more projects</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Pei Ling Chang</p>
+      <p>Project Forge — multi-format sports video pipeline.</p>
+    </div>
+  </footer>
+</body>
+</html>
